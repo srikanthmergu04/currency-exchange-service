@@ -20,7 +20,7 @@ public class CurrencyExchangeController {
 	@Autowired
 	private Environment environment;
 
-	@GetMapping("/currency-exchange/{from}/to/{to}")
+	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchange getExchangeValue(@PathVariable String from, @PathVariable String to) {
 		CurrencyExchange currencyExchange = currencyExchangeRepository.findByFromAndTo(from, to);
 
